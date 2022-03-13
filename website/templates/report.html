@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+<style>
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #06845A;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #141212;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #f1f1f1;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<body>
+
+ 
+  
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding">
+    <h1 class="w3-center" ><span  class="w3-text-white" style="font-size:30px">Your Report</span></h1>
+  </div>
+
+</div>
+
+
+
+<!-- Header with image -->
+<header  style = "height: 100%">
+    <br><br><br><br><br>
+    <table id="myTable" >
+        <tr class="header" style = "color: white">
+          <th style="width:30%;">Booking ID</th>
+          <th style="width:40%;">Customer</th>
+          <th style="width:40%;">Payment Value</th>
+        </tr>
+        {% for booking in result %}
+        <tr>
+          <td>{{booking.id}}</td>
+          <td>{{booking.name}}</td>
+          <td>{{booking.payment_value}}</td>
+        </tr>
+        {% endfor %}
+
+        {%if countresult == 0%}
+        <tr>
+            <td colspan="3">No booking for this month and year</td>
+        </tr>
+        {% endif %}
+      </table>
+
+
+
+</header>
+
+
+
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+ 
+</footer>
+
+
+</body>
+</html>

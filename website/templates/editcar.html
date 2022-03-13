@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+<style>
+
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #06845A;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #141212;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: #f1f1f1;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to containers */
+.container1 {
+  position: relative;
+  padding: 16px;
+  background-color: rgba(255,255,255, 0.7);
+  width: 70%;
+  left: 15%;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=number], input[type=date]{
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=number]:focus input[type=date]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #06845A;
+  margin-bottom: 7px;
+}
+
+/* Set a style for the submit button */
+.addbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.addbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+</style>
+<body>
+
+ 
+  
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding">
+    <h1 class="w3-center" ><span  class="w3-text-white" style="font-size:30px">Edit Car</span></h1>
+  </div>
+
+</div>
+
+
+
+<!-- Header with image -->
+<header  style = " background-color: #ccc">
+    <br><br><br><br><br>
+    <form method= "POST">
+    {% for car in cardetail %}
+    
+    <div class="container1">
+        
+        <h2 style="text-align:center; font-size:40px">Edit </h2>
+        <hr>
+  
+        <label for="roadtax"><b>Road Tax Expiry Date: </b></label>
+        <input type="text" placeholder="{{car.road_tax_expiry}}" onfocus="(this.type='date')" name="roadtax" id="roadtax">
+
+        <label for="brand"><b>Brand:</b></label>
+        <input type="text" name="brand" id="brand"  placeholder = "{{car.brand}}"list="cars">
+        <datalist id="cars">
+          <option>Proton</option>
+          <option>Nissan</option>
+          <option>Honda</option>
+          <option>Toyota</option>
+        </datalist>
+  
+        <label for="submodel"><b>Model:</b></label>
+        <input type="text" placeholder="{{car.submodel}}" name="submodel" id="submodel" >
+  
+        <label for="num_doors"><b>Number of doors:</b></label>
+        <input type="number" placeholder="{{car.num_doors}}" name="num_doors" id="num_doors" >
+        <br>
+        <label for="type"><b>Type of cars:</b></label>
+        <input type="text" name="type" id="type"  placeholder = "{{car.type}}"list="types" >
+        <datalist id="types">
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Minivan</option>
+          <option>Coupe</option>
+        </datalist>
+    
+        <label for="transmission"><b>Transmission:</b></label>
+        <input type="text" name="transmission" id="transmission"  placeholder = "{{car.transmission}}" list="transmissions" >
+        <datalist  id="transmissions">
+            <option>AUTOMATIC</option>
+            <option>MANUAL</option>
+            <option>AUTOMATED MANUAL</option>
+        </datalist>
+        
+
+        
+        <label for="condition"><b>Condition:</b></label><br>
+        <textarea name="condition" id="note" rows="4" cols="120">{{car.condition}}</textarea><br>
+      
+        <label for="hourrate"><b>Price per hour (RM):</b></label>
+        <input type="number" placeholder="{{car.price_per_hour}}" name="hourrate" id="hourrate" step="0.01" >
+  
+        <label for="dayrate"><b>Price per day (RM):</b></label>
+        <input type="number" placeholder="{{car.price_per_day}}" name="dayrate" id="dayrate" step="0.01" >
+
+    
+        <button type="submit" name = "btn" value="addcar" class="addbtn">Update</button>
+    
+    {% endfor %}
+</form>
+
+</header>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

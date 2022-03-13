@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+
+<style>
+
+.container1 {
+  position: relative;
+  padding: 10px;
+  background-color: rgba(255,255,255, 0.7);
+  width: 70%;
+  left: 15%;
+}
+
+div.gallery {
+  margin: 20px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 220px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: 120px;
+  
+}
+
+.pillbutton {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  width: 100%
+}
+
+.pillbutton:hover {
+  background-color: #6B6E6C;
+}
+
+
+.anibutton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6B6E6C;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 207px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.anibutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.anibutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.anibutton:hover span {
+  padding-right: 25px;
+}
+
+.anibutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding " style = "color: white">
+    <div class="w3-col s3">
+      <a href="/" class="w3-button w3-block ">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="" class="w3-button w3-block ">PROFILE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/yourbooking" class="w3-button w3-block ">YOUR BOOKING</a>
+    </div>
+    {% if customer.is_authenticated %}
+    <div class="w3-col s3">
+      <a href="/logout" class="w3-button w3-block ">LOGOUT</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Header with image -->
+<header style ="height: 110%;" class="bgimg w3-display-container w3-grayscale-min" id="home">
+<h1 class="w3-center w3-padding-64"><span  class="w3-text-white" style="font-size:30px"> Welcome, {{session['user_name']}}! <br>RECOMMENDED CAR FOR YOU: </span></h1>
+  {% if block == "1" %}
+    
+  {% else %}
+  <div class="container1">
+    <h1 class="w3-center w3-padding-64"><span   style="font-size:40px">{{car_user_likes}}</span></h1>
+  </div>
+  {% endif %}
+
+<div class="w3-container" id="about">
+ <div class="w3-row-padding"></div> 
+    {% for car in carrecom1 %}
+ 
+      <div class="w3-third w3-container w3-margin-bottom">
+        <img src={{url_for('static', filename='uploads/' + car.img_name)}} alt="Norway" style="height:200px; width: 100%" class="w3-hover-opacity">
+        <div class="w3-container w3-white">
+            <h3>{{car.brand}}, {{car.submodel}}</h3>
+            <h6 class="w3-opacity">RM {{car.price_per_hour}}/hour</h6>
+            <h6 class="w3-opacity">RM {{car.price_per_day}}/day</h6>
+            <p>{{car.car_status}}</p>
+            <a href="/bookcar/{{car.id}}" class="anibutton" style="vertical-align:middle"><span>Book Now </span></a>
+        </div>
+      </div>
+
+    {% endfor %}
+  </div>
+
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:1400px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Find Another Car Rental </span></h5>
+    <h5 class="w3-center "><span class="w3-tag w3-wide">Total Car:{{carscount}}</span></h5>
+    {% for car in cars %}
+    <div class="gallery">
+      <a target="_blank" >
+        <img src={{url_for('static', filename='uploads/' + car.img_name)}} alt="Cinque Terre" width="700" max-height="400">
+      </a>
+      <div class="w3-container w3-white">
+        <h3>{{car.submodel}}</h3>
+        <h6 class="w3-opacity">RM {{car.price_per_hour}}/hour</h6>
+        <h6 class="w3-opacity">RM {{car.price_per_day}}/day</h6>
+        <p>{{car.car_status}}</p>
+      </div>
+        <a href="/bookcar/{{car.id}}" class="anibutton" style="vertical-align:middle"><span>Book Now </span></a>
+        <p class="w3-center" style="font-size:20px"> <a href="/car/{{car.id}}"> See details</span></a></p>
+    </div>
+
+    {% endfor %}
+  </div>
+
+
+  <a href="/carlist" class="pillbutton">CLICK HERE TO SEE MORE</a>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  
+</footer>
+
+
+</body>
+</html>

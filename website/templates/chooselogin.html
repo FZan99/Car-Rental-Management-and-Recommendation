@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<style>
+
+.logo {
+  
+  max-width: 100%;
+  height: auto;
+  
+}
+
+.container2 {
+  position: relative;
+  border-radius: 5px;
+  background-color: rgba(255,255,255, 0.7);
+  padding: 20px 0 30px 0;
+  width: 70%;
+  left: 14%;
+  
+} 
+
+/* style inputs and link buttons */
+input,
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+
+input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+
+
+/* add appropriate colors to fb, twitter and google buttons */
+.custlogin {
+  background-color: #3B5998;
+  color: white;
+  text-align: center;
+}
+
+.clientlogin {
+  background-color: #55ACEE;
+  color: white;
+  text-align: center;
+}
+
+
+
+/* style the submit button */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #06845A;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding">
+    <h1 class="w3-center" ><span  class="w3-text-white" style="font-size:30px">WELCOME TO UMS CAR RENTAL</span></h1>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header style ="height: 100%;" class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <br><br>
+  <br><br>
+  <br><br>
+  <div class="container2">
+    <form action="/action_page.php">
+      <div class="row">
+        <h2 style="text-align:center; font-size:60px">LOGIN </h2>
+        <br><br>
+       
+        <div class="vl">
+
+        </div>
+  
+        <div class="col">
+          <img class= "logo" src={{url_for('static', filename='image/ums logo.png')}} width="400" height="400"  >
+          
+
+        </div>
+
+          <div class="col">
+
+            <div class="hide-md-lg">
+              <p>Select login:</p>
+            </div>
+            
+            <a href="/custlogin" class="custlogin btn">
+              Want to rent car? Click here
+             </a>
+             
+            <a href="/clientlogin" class="clientlogin btn">
+               Want to collaborate with us? Click here
+            </a>
+
+            <p class="w3-center" style="font-size:20px"> <a href="/choosesignup"> Dont have an account? Register Now!!</span></a></p>
+
+          </div>
+      
+        
+      </div>
+    </form>
+  </div>
+  
+  
+
+
+  
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+ 
+</footer>
+
+
+</body>
+</html>

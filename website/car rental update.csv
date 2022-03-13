@@ -1,0 +1,172 @@
+id,client_id,road_tax_expiry,brand,submodel,num_doors,type,transmission,condition,price_per_hour,price_per_day,car_status,img_name
+1,1,not set,Acura,TLX,4,TLX Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+2,1,not set,Alfa Romeo,4C,2,4C Coupe,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+3,1,not set,Audi,A3,4,A3 Sedan,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+4,1,not set,Audi,A4,4,A4 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+5,1,not set,Audi,A5,2,A5 Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+6,1,not set,Audi,A6,4,A6 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+7,1,not set,Audi,A7,4,A7 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+8,1,not set,Audi,Q3,4,Q3 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+9,1,not set,Audi,Q5,4,Q5 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+10,1,not set,Audi,Q7,4,Q7 Diesel,AUTOMATIC,Good,30,100,Available,noimage.jpg
+11,1,not set,Audi,S3,4,S3 Sedan,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+12,1,not set,Audi,S4,4,S4 Sedan,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+13,1,not set,Audi,S5,2,S5 Coupe,MANUAL,Good,30,100,Available,noimage.jpg
+14,1,not set,Audi,S8,4,S8 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+15,1,not set,Audi,SQ5,4,SQ5 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+16,1,not set,BMW,2 Series,2,2 Series Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+17,1,not set,BMW,3 Series,4,3 Series Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+18,1,not set,BMW,3 Series Gran Turismo,4,3 Series Gran Turismo Hatchback,AUTOMATIC,Good,30,100,Available,noimage.jpg
+19,1,not set,BMW,4 Series,2,4 Series Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+20,1,not set,BMW,4 Series Gran Coupe,4,4 Series Gran Coupe Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+21,1,not set,BMW,5 Series,4,5 Series Diesel,AUTOMATIC,Good,30,100,Available,noimage.jpg
+22,1,not set,BMW,7 Series,4,7 Series Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+23,1,not set,BMW,M4,2,M4 Coupe,MANUAL,Good,30,100,Available,noimage.jpg
+24,1,not set,BMW,X3,4,X3 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+25,1,not set,BMW,X4,4,X4 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+26,1,not set,BMW,X6,4,X6 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+27,1,not set,BMW,i3,4,i3 Hatchback,DIRECT DRIVE,Good,30,100,Available,noimage.jpg
+28,1,not set,Bentley,Flying Spur,4,Flying Spur Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+29,1,not set,Cadillac,Escalade,4,Escalade SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+30,1,not set,Chevrolet,City Express,4,City Express Minivan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+31,1,not set,Chevrolet,Colorado,4,Colorado Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+32,1,not set,Chevrolet,Corvette,2,Corvette Z06,MANUAL,Good,30,100,Available,noimage.jpg
+33,1,not set,Chevrolet,Cruze,4,Cruze Diesel,AUTOMATIC,Good,30,100,Available,noimage.jpg
+34,1,not set,Chevrolet,Impala,4,Impala Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+35,1,not set,Chevrolet,Silverado 1500,4,Silverado 1500 Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+36,1,not set,Chevrolet,Silverado 2500HD,4,Silverado 2500HD Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+37,1,not set,Chevrolet,Suburban,4,Suburban SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+38,1,not set,Chevrolet,Tahoe,4,Tahoe SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+39,1,not set,Chevrolet,Trax,4,Trax SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+40,1,not set,Chrysler,200,4,200 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+41,1,not set,Chrysler,300,4,300 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+42,1,not set,Chrysler,Town and Country,4,Town and Country Minivan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+43,1,not set,Dodge,Challenger,2,Challenger Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+44,1,not set,Dodge,Charger,4,Charger Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+45,1,not set,Dodge,Dart,4,Dart Sedan,MANUAL,Good,30,100,Available,noimage.jpg
+46,1,not set,Dodge,Durango,4,Durango SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+47,1,not set,Dodge,Grand Caravan,4,Grand Caravan Minivan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+48,1,not set,Dodge,Journey,4,Journey SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+49,1,not set,Dodge,Viper,2,Viper Coupe,MANUAL,Good,30,100,Available,noimage.jpg
+50,1,not set,FIAT,500,2,500 Convertible,MANUAL,Good,30,100,Available,noimage.jpg
+51,1,not set,FIAT,500L,4,500L Wagon,MANUAL,Good,30,100,Available,noimage.jpg
+52,1,not set,Ford,Escape,4,Escape SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+53,1,not set,Ford,Explorer,4,Explorer SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+54,1,not set,Ford,F-150,4,F-150 SuperCrew,AUTOMATIC,Good,30,100,Available,noimage.jpg
+55,1,not set,Ford,F-250 Super Duty,4,F-250 Super Duty Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+56,1,not set,Ford,F-350 Super Duty,4,F-350 Super Duty Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+57,1,not set,Ford,F-450 Super Duty,4,F-450 Super Duty Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+58,1,not set,Ford,Fiesta,4,Fiesta Sedan,MANUAL,Good,30,100,Available,noimage.jpg
+59,1,not set,Ford,Focus,4,Focus Sedan,MANUAL,Good,30,100,Available,noimage.jpg
+60,1,not set,Ford,Focus ST,4,Focus ST Hatchback,MANUAL,Good,30,100,Available,noimage.jpg
+61,1,not set,Ford,Mustang,2,Mustang Coupe,MANUAL,Good,30,100,Available,noimage.jpg
+62,1,not set,GMC,Canyon,4,Canyon Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+63,1,not set,GMC,Yukon XL,4,Yukon XL SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+64,1,not set,Honda,CR-V,4,CR-V SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+65,1,not set,Honda,Civic,4,Civic Sedan,MANUAL,Good,30,100,Available,noimage.jpg
+66,1,not set,Honda,Crosstour,4,Crosstour Hatchback,AUTOMATIC,Good,30,100,Available,noimage.jpg
+67,1,not set,Honda,Fit,4,Fit Hatchback,MANUAL,Good,30,100,Available,noimage.jpg
+68,1,not set,Honda,Odyssey,4,Odyssey Minivan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+69,1,not set,Hyundai,Elantra,4,Elantra Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+70,1,not set,Hyundai,Equus,4,Equus Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+71,1,not set,Hyundai,Genesis,4,Genesis Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+72,1,not set,Hyundai,Santa Fe Sport,4,Santa Fe Sport SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+73,1,not set,Hyundai,Sonata,4,Sonata Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+74,1,not set,Hyundai,Tucson,4,Tucson SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+75,1,not set,Infiniti,Q50,4,Q50 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+76,1,not set,Infiniti,Q70,4,Q70 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+77,1,not set,Jaguar,F-TYPE,2,F-TYPE Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+78,1,not set,Jaguar,XF,4,XF Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+79,1,not set,Jaguar,XJ,4,XJ Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+80,1,not set,Jeep,Compass,4,Compass SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+81,1,not set,Jeep,Grand Cherokee,4,Grand Cherokee SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+82,1,not set,Jeep,Patriot,4,Patriot SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+83,1,not set,Jeep,Renegade,4,Renegade SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+84,1,not set,Jeep,Wrangler,2,Wrangler SUV,MANUAL,Good,30,100,Available,noimage.jpg
+85,1,not set,Kia,Forte,2,Forte Koup,AUTOMATIC,Good,30,100,Available,noimage.jpg
+86,1,not set,Kia,K900,4,K900 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+87,1,not set,Kia,Sedona,4,Sedona Minivan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+88,1,not set,Kia,Sorento,4,Sorento SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+89,1,not set,Kia,Soul EV,4,Soul EV Wagon,DIRECT DRIVE,Good,30,100,Available,noimage.jpg
+90,1,not set,Kia,Sportage,4,Sportage SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+91,1,not set,Land Rover,Discovery Sport,4,Discovery Sport SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+92,1,not set,Land Rover,LR4,4,LR4 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+93,1,not set,Land Rover,Range Rover Evoque,4,Range Rover Evoque SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+94,1,not set,Land Rover,Range Rover Sport,4,Range Rover Sport SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+95,1,not set,Lexus,CT 200h,4,CT 200h Hatchback,AUTOMATIC,Good,30,100,Available,noimage.jpg
+96,1,not set,Lexus,IS 350,4,IS 350 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+97,1,not set,Lexus,NX 200t,4,NX 200t SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+98,1,not set,Lexus,NX 300h,4,NX 300h SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+99,1,not set,Lexus,RC 350,2,RC 350 Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+100,1,not set,Lexus,RC F,2,RC F Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+101,1,not set,Lexus,RX 450h,4,RX 450h SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+102,1,not set,Lincoln,MKC,4,MKC SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+103,1,not set,Lincoln,MKZ,4,MKZ Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+104,1,not set,Lincoln,Navigator,4,Navigator SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+105,1,not set,MINI,Cooper,2,Cooper Hatchback,MANUAL,Good,30,100,Available,noimage.jpg
+106,1,not set,Mazda,CX-5,4,CX-5 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+107,1,not set,Mazda,MX-5 Miata,2,MX-5 Miata Convertible,AUTOMATIC,Good,30,100,Available,noimage.jpg
+108,1,not set,Mercedes-Benz,C-Class,4,C-Class Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+109,1,not set,Mercedes-Benz,CLA-Class,4,CLA-Class CLA45 AMG,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+110,1,not set,Mercedes-Benz,CLS-Class,4,CLS-Class Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+111,1,not set,Mercedes-Benz,E-Class,4,E-Class Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+112,1,not set,Mercedes-Benz,GLA-Class,4,GLA-Class SUV,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+113,1,not set,Mercedes-Benz,S-Class,4,S-Class S63 AMG 4MATIC,AUTOMATIC,Good,30,100,Available,noimage.jpg
+114,1,not set,Mitsubishi,Mirage,4,Mirage Hatchback,AUTOMATIC,Good,30,100,Available,noimage.jpg
+115,1,not set,Mitsubishi,Outlander Sport,4,Outlander Sport SUV,MANUAL,Good,30,100,Available,noimage.jpg
+116,1,not set,Nissan,GT-R,2,GT-R Coupe,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+117,1,not set,Nissan,Murano,4,Murano SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+118,1,not set,Nissan,NV200,4,NV200 Minivan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+119,1,not set,Nissan,Rogue,4,Rogue SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+120,1,not set,Honda,Accord,4,Accord Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+121,1,not set,Honda,Accord Hybrid,4,Accord Hybrid Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+122,1,not set,Honda,Accord Plug-In Hybrid,4,Accord Plug-In Hybrid Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+123,1,not set,Honda,Pilot,4,Pilot SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+124,1,not set,Hyundai,Accent,4,Accent Hatchback,AUTOMATIC,Good,30,100,Available,noimage.jpg
+125,1,not set,Hyundai,Azera,4,Azera Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+126,1,not set,Hyundai,Elantra Coupe,2,Elantra Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+127,1,not set,Hyundai,Genesis Coupe,2,Genesis Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+128,1,not set,Hyundai,Santa Fe,4,Santa Fe SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+129,1,not set,Hyundai,Sonata Hybrid,4,Sonata Hybrid Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+130,1,not set,Mazda,3,4,3 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+131,1,not set,Mazda,5,4,5 Minivan,MANUAL,Good,30,100,Available,noimage.jpg
+132,1,not set,Mazda,6,4,6 Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+133,1,not set,Mazda,CX-9,4,CX-9 SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+134,1,not set,Mercedes-Benz,B-Class Electric Drive,4,B-Class Electric Drive Hatchback,DIRECT DRIVE,Good,30,100,Available,noimage.jpg
+135,1,not set,Mercedes-Benz,G-Class,4,G-Class SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+136,1,not set,Mercedes-Benz,GL-Class,4,GL-Class SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+137,1,not set,Mercedes-Benz,GLK-Class,4,GLK-Class SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+138,1,not set,Mercedes-Benz,SL-Class,2,SL-Class SL65 AMG,AUTOMATIC,Good,30,100,Available,noimage.jpg
+139,1,not set,Mercedes-Benz,SLS AMG GT,2,SLS AMG GT Convertible,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+140,1,not set,Mitsubishi,Outlander,4,Outlander SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+141,1,not set,Nissan,370Z,2,370Z Coupe,MANUAL,Good,30,100,Available,noimage.jpg
+142,1,not set,Nissan,Altima,4,Altima Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+143,1,not set,Nissan,Frontier,4,Frontier Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+144,1,not set,Nissan,Juke,4,Juke Hatchback,AUTOMATIC,Good,30,100,Available,noimage.jpg
+145,1,not set,Nissan,Leaf,4,Leaf Hatchback,DIRECT DRIVE,Good,30,100,Available,noimage.jpg
+146,1,not set,Nissan,Pathfinder,4,Pathfinder SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+147,1,not set,Nissan,Sentra,4,Sentra Sedan,MANUAL,Good,30,100,Available,noimage.jpg
+148,1,not set,Nissan,Versa Note,4,Versa Note Hatchback,AUTOMATIC,Good,30,100,Available,noimage.jpg
+149,1,not set,Porsche,911,2,911 Coupe,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+150,1,not set,Porsche,Boxster,2,Boxster Convertible,MANUAL,Good,30,100,Available,noimage.jpg
+151,1,not set,Porsche,Cayenne,4,Cayenne Diesel,AUTOMATIC,Good,30,100,Available,noimage.jpg
+152,1,not set,Porsche,Cayman,2,Cayman Coupe,MANUAL,Good,30,100,Available,noimage.jpg
+153,1,not set,Porsche,Panamera,4,Panamera Sedan,AUTOMATED MANUAL,Good,30,100,Available,noimage.jpg
+154,1,not set,Ram,1500,4,1500 Quad Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+155,1,not set,Ram,2500,4,2500 Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+156,1,not set,Ram,3500,4,3500 Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+157,1,not set,Ram,3500,4,3500 Crew Cab,AUTOMATIC,Good,30,100,Available,noimage.jpg
+158,1,not set,Rolls-Royce,Ghost,4,Ghost Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+159,1,not set,Rolls-Royce,Wraith,2,Wraith Coupe,AUTOMATIC,Good,30,100,Available,noimage.jpg
+160,1,not set,Subaru,BRZ,2,BRZ Coupe,MANUAL,Good,30,100,Available,noimage.jpg
+161,1,not set,Subaru,Forester,4,Forester SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+162,1,not set,Subaru,Impreza,4,Impreza Hatchback,MANUAL,Good,30,100,Available,noimage.jpg
+163,1,not set,Subaru,Legacy,4,Legacy Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+164,1,not set,Subaru,Outback,4,Outback Wagon,AUTOMATIC,Good,30,100,Available,noimage.jpg
+165,1,not set,Subaru,XV Crosstrek,4,XV Crosstrek Hybrid,AUTOMATIC,Good,30,100,Available,noimage.jpg
+166,1,not set,Tesla,Model S,4,Model S Sedan,DIRECT DRIVE,Good,30,100,Available,noimage.jpg
+167,1,not set,Toyota,4Runner,4,4Runner SUV,AUTOMATIC,Good,30,100,Available,noimage.jpg
+168,1,not set,Toyota,Avalon,4,Avalon Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+169,1,not set,Toyota,Avalon Hybrid,4,Avalon Hybrid Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+170,1,not set,Toyota,Camry,4,Camry Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg
+171,1,not set,Toyota,Camry Hybrid,4,Camry Hybrid Sedan,AUTOMATIC,Good,30,100,Available,noimage.jpg

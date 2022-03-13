@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+<style>
+
+
+</style>
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding " style = "color: white">
+    <div class="w3-col s3">
+      <a href="/" class="w3-button w3-block ">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="" class="w3-button w3-block ">PROFILE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/yourbooking" class="w3-button w3-block ">YOUR BOOKING</a>
+    </div>
+   
+    <div class="w3-col s3">
+      <a href="/logout" class="w3-button w3-block ">LOGOUT</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Header with image -->
+<header style ="height: 100%;" class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-left w3-padding w3-col l6 m8" style="margin-left: 24%;">
+    <p>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+       {% for message in messages %}
+         <div class="alert alert-primary">
+          <strong>{{ message }}</strong>
+        </div>
+       {% endfor %}
+        {% endif %}
+      {% endwith %}
+     </p>
+    <div class="w3-container w3-green">
+      <h2><i class="fa fa-bed w3-margin-right"></i>Booking Car</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+      <form method = "POST">
+        <div class="w3-row-padding" style="margin:0 -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-calendar-o"></i> Start Date</label>
+            <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="startDate" required>
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-calendar-o"></i> Start Time</label>
+            <input class="w3-input w3-border" type="time" placeholder="" name="startTime" required>
+          </div>
+        </div>
+        <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half w3-margin-bottom">
+            <label><i class="fa fa-male"></i> Return Date</label>
+            <input class="w3-input w3-border" type="date" placeholder="DD MM YYYY" name="returnDate" required>
+          </div>
+          <div class="w3-half">
+            <label><i class="fa fa-child"></i> Return Time</label>
+          <input class="w3-input w3-border" type="time" placeholder="" name="returnTime" required>
+          </div>
+        </div>
+     
+
+        <div class="w3-row-padding" style="margin:8px -16px;">
+            <div class="w3-half w3-margin-bottom">
+              <label><i class="fa fa-male"></i> Pick-up location</label>
+              <input class="w3-input w3-border" type="text" placeholder="UMS area" name="pickuplocation" required>
+            </div>
+            <div class="w3-half">
+              <label><i class="fa fa-child"></i> Return location</label>
+            <input class="w3-input w3-border" type="text"  placeholder="UMS area" name="returnlocation" required>
+            </div>
+          </div>
+          
+        <div class="w3-row-padding" style="margin:8px -16px;">
+          <div class="w3-half">
+            <label><i class="fa fa-child"></i> Select payment rate:</label>
+            <input type="checkbox" id="payrate" name="payrate" value="hour">
+            <label for="payrate"> per hour</label>      
+            <input type="checkbox" id="payrate" name="payrate" value="day">
+            <label for="payrate"> per day</label>
+          </div>
+        </div>
+
+        <button class="w3-button w3-dark-grey" type="submit"><i class="fa fa-search w3-margin-right"></i>Continue</button>
+      </form>
+    </div>
+  </div>
+    
+</header>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+   
+</footer>
+
+
+</body>
+</html>

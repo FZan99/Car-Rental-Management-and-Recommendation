@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      crossorigin="anonymous"
+    />
+<style>
+
+
+/* Add padding to containers */
+.container1 {
+  position: relative;
+  padding: 16px;
+  background-color: rgba(255,255,255, 0.7);
+  width: 70%;
+  left: 15%;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #06845A;
+  margin-bottom: 7px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: rgba(255,255,255, 0.7);
+  text-align: center;
+}
+
+</style>
+<body>
+
+ 
+  
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding">
+    <h1 class="w3-center" ><span  class="w3-text-white" style="font-size:30px">WELCOME TO UMS CAR RENTAL</span></h1>
+  </div>
+
+</div>
+
+
+
+<!-- Header with image -->
+<header  class="bgimg w3-display-container w3-grayscale-min" id="home">
+
+
+  
+<form method= "POST">
+  
+    <div class="container1">
+      
+      <br><br>
+      <br><br>
+      <h2 style="text-align:center; font-size:40px">Sign-Up (Collaboration)</h2>
+      <hr>
+
+      <p>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+         {% for message in messages %}
+           <div class="alert alert-primary">
+            <strong>{{ message }}</strong>
+          </div>
+         {% endfor %}
+          {% endif %}
+        {% endwith %}
+       </p>
+  
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter name" name="name" id="name" required>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email exp: abc@gmail.com" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required>
+
+      <label for="phone"><b>Phone Number</b></label>
+      <input type="text" placeholder="Enter Phone Number" name="phone" id="phone" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+      <h6> Online Banking Information : <h6>
+
+        <label for="bank_name"><b>Bank Name:</b></label>
+        <input type="text" name="bank_name" id="bank_name"  placeholder = "Select bank from the list" list="bank_names" required>
+        <datalist id="bank_names">
+        <option>Maybank</option>
+        <option>Bank Islam</option>
+        <option>Bank Rakyat</option>
+        <option>AM Bank</option>
+        <option>HSBC Bank</option>
+        <option>Public Bank</option>
+        </datalist>  
+
+        <label for="account_detail"><b>Account Number</b></label>
+        <input type="text" placeholder="Enter Online Banking Account Number" name="account_detail" id="account_detail" required>
+
+      <div class="g-recaptcha" data-sitekey="{{ sitekey }}"></div> <br/>
+
+
+      <hr>
+      <p style = "text-align: center">Already have an account? <a href="/chooselogin">Log in</a>.</p>
+  
+      <button type="submit" class="registerbtn">Sign-Up</button>
+
+    </div>
+    
+  </form>
+
+</header>
+
+
+
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+ 
+</footer>
+
+
+</body>
+</html>

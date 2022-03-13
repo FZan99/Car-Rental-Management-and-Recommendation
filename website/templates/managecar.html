@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+ 
+
+<style>
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 285px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #06845A;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  background-color: #ddd;
+}
+
+
+/* Add padding to containers */
+.container1 {
+  position: relative;
+  padding: 16px;
+  background-color: rgba(255,255,255, 0.7);
+  width: 70%;
+  left: 15%;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=number], input[type=date]{
+  width: 100%;
+  padding: 6px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=number]:focus input[type=date]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #06845A;
+  margin-bottom: 7px;
+}
+
+/* Set a style for the submit button */
+.addbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.addbtn:hover {
+  opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: rgba(255,255,255, 0.7);
+  text-align: center;
+}
+
+.statustbutton{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #04AA6D;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 207px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.editbutton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6B6E6C;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 207px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.editbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.editbutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.editbutton:hover span {
+  padding-right: 25px;
+}
+
+.editbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+</style>
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding " style = "color: white">
+    <div class="w3-col s3">
+      <a href="/home2" class="w3-button w3-block ">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="" class="w3-button w3-block ">PROFILE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="" class="w3-button w3-block ">MANAGE CAR</a>
+    </div>
+   
+    <div class="w3-col s3">
+      <a href="/logout" class="w3-button w3-block ">LOGOUT</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Header with image -->
+<header style ="height: 100%;" class="bgimg w3-display-container w3-grayscale-min" id="home">
+ 
+
+
+
+  <h1 class="w3-center w3-padding-64"><span  class="w3-text-white" style="font-size:30px">Manage Car</span></h1>
+  
+
+
+  <div class="tab">
+    <button class="tablinks" onclick="openLink(event, 'reg_car')" id="myLink">REGISTERED CAR</button>
+    <button class="tablinks" onclick="openLink(event, 'add_car')">ADD CAR</button>
+  </div>
+  
+  <div id="reg_car" class="tabcontent">
+
+    <ul class="list-group list-group-flush" id="notes"></ul>
+    {% for car in registeredcar %}
+      <li class="list-group-item">
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        <span class="w3-right w3-opacity">car id:{{car.id }}</span>
+        <h4>Car: {{car.brand}}, {{car.submodel}}</h4><br>
+        <hr class="w3-clear">
+        
+        <img src={{url_for('static', filename='uploads/' + car.img_name)}} alt="Norway" style="width:20%" class="w3-hover-opacity">
+        <div class="w3-row w3-large">
+          <h3>Status: {{car.car_status}}</h3>
+          <div class="w3-col s6">
+            <p> Road Tax Expired: {{car.road_tax_expiry}}</p>
+            <p>Price(hour rate): RM {{car.price_per_hour}}</p>
+            
+            
+          </div>
+          <div class="w3-col s6">
+            <p> Type: {{car.type}}</p>
+            <p> Price(day rate): RM {{car.price_per_day}}</p>
+            
+          </div>
+          
+          <form method= "POST">
+          <a  href="/editcar/{{car.id}}" class="editbutton" style="vertical-align:middle"><span>Edit</span></a>
+          <input type="hidden" id="current_status" name="current_status" value= '{{car.car_status}}'>
+          <input type="hidden" id="car_id" name="car_id" value= '{{car.id}}'>
+          <button type= "submit" name = "btn" value="carstatus" class="statustbutton" style="vertical-align:middle"><span>Change car status</span></button> 
+          </form> 
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+  </div>
+  
+  <div onsubmit="return handleData()" id="add_car" class="tabcontent">
+    <form  enctype="multipart/form-data" method="POST">
+  
+      <div class="container1">
+        
+        <h2 style="text-align:center; font-size:40px">Register Car</h2>
+        <hr>
+  
+        <label for="roadtax"><b>Road Tax Expiry Date: </b></label>
+        <input type="date" placeholder="DD MM YYYY" name="roadtax" id="roadtax" required>
+
+        <label for="brand"><b>Brand:</b></label>
+        <input type="text" name="brand" id="brand"  placeholder = "Select from the list or custom input"list="cars" required>
+        <datalist id="cars">
+          <option>Proton</option>
+          <option>Nissan</option>
+          <option>Honda</option>
+          <option>Toyota</option>
+        </datalist>
+  
+        <label for="submodel"><b>Model:</b></label>
+        <input type="text" placeholder="exp: Proton X50" name="submodel" id="submodel" required>
+  
+        <label for="num_doors"><b>Number of doors:</b></label>
+        <input type="number" placeholder="exp: 4" name="num_doors" id="num_doors" required>
+        <br>
+        <label for="type"><b>Type of cars:</b></label>
+        <input type="text" name="type" id="type"  placeholder = "Select from the list or custom input"list="types" required>
+        <datalist id="types">
+          <option>Sedan</option>
+          <option>SUV</option>
+          <option>Minivan</option>
+          <option>Coupe</option>
+        </datalist>
+    
+        <label for="transmission"><b>Transmission:</b></label>
+        <div style="visibility:hidden; color:red; " id="chk_option_error">
+          Please select one option only.
+        </div>
+          <input type="checkbox" id="transmission" name="transmission" value="AUTOMATIC">
+          <label for="transmission"> Automatic</label>      
+          <input type="checkbox" id="transmission" name="transmission" value="MANUAL">
+          <label for="transmission"> Manual</label>
+          <input type="checkbox" id="transmission" name="transmission" value="AUTOMATED MANUAL">
+          <label for="transmission"> Automated Manual</label><br><br>
+
+        
+        <label for="condition"><b>Condition:</b></label><br>
+        <textarea name="condition" id="note" rows="4" cols="120">Describe your car condition here</textarea><br>
+      
+        <label for="hourrate"><b>Price per hour (RM):</b></label>
+        <input type="number" placeholder="exp: 30" name="hourrate" id="hourrate" step="0.01" required>
+  
+        <label for="dayrate"><b>Price per day (RM):</b></label>
+        <input type="number" placeholder="exp: 100" name="dayrate" id="dayrate" step="0.01" required>
+  
+        <label for="fileToUpload"><b>Upload picture</b></label>
+        <input type="file" name="fileToUpload"  id="fileToUpload" required>
+    
+        <button type="submit" name = "btn" value="addcar" class="addbtn">Add Car</button>
+  
+      </div>
+      
+    </form>
+  </div>
+  
+  
+
+  
+</header>
+
+
+
+
+<script>
+ function openLink(evt, linkName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("myLink").click();
+
+  
+
+var closebtns = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+}
+  </script>
+
+
+
+<script>
+  function handleData()
+  {
+      var form_data = new FormData(document.querySelector("form"));
+      
+      if(!form_data.has("transmission"))
+      {
+          document.getElementById("chk_option_error").style.visibility = "visible";
+      }
+      else
+      {
+          document.getElementById("chk_option_error").style.visibility = "hidden";
+          document.getElementById("add_car").submit();
+      }
+      return false;
+  }
+  </script>
+
+</body>
+</html>

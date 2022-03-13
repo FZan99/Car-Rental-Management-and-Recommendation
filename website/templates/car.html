@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+
+<style>
+.anibutton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6B6E6C;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.anibutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.anibutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.anibutton:hover span {
+  padding-right: 25px;
+}
+
+.anibutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+</style>
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding " style = "color: white">
+    <div class="w3-col s3">
+      <a href="/" class="w3-button w3-block ">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="" class="w3-button w3-block ">PROFILE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/yourbooking" class="w3-button w3-block ">YOUR BOOKING</a>
+    </div>
+    {% if customer.is_authenticated %}
+    <div class="w3-col s3">
+      <a href="/logout" class="w3-button w3-block ">LOGOUT</a>
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+    <br><br>
+    <div class="w3-container w3-card w3-white w3-margin-bottom">
+    
+        <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+            <span class="w3-right w3-opacity">Car ID: {{carchosen.id}}</span>
+            <h3>Car's Owner: {{client.name}}</h3><br>
+            <h3>{{carchosen.car_status}} to rent</h3><br>
+            <hr class="w3-clear">
+  
+                <div class="w3-row-padding" id="about">
+                  <div class="w3-col l4 12">
+                    <h4>Details</h4><br>
+                    <h6>Brand :</h6>
+                    <p class="w3-text-grey">{{carchosen.brand}}</p>
+
+                    <h6>Model :</h6>
+                    <p class="w3-text-grey">{{carchosen.submodel}}</p>
+
+                    <h6>Transmission :</h6>
+                    <p class="w3-text-grey">{{carchosen.transmission}}</p>
+
+                    <h6>Road Tax Expired Date :</h6>
+                    <p class="w3-text-grey">{{carchosen.road_tax_expiry}}</p>
+
+                    <h6>Num. Doors :</h6>
+                    <p class="w3-text-grey">{{carchosen.num_doors}}</p>
+
+                    <h6>Type :</h6>
+                    <p class="w3-text-grey">{{carchosen.type}}</p>
+
+                    <h6>Price :</h6>
+                    <p class="w3-text-grey">RM {{carchosen.price_per_hour}} (hour rate)/RM {{carchosen.price_per_day}} (day rate)</p><br>
+                  
+
+                  <a href="/" style="vertical-align:middle; display: inline-block;
+                  border-radius: 4px;
+                  background-color: red;
+                  border: none;
+                  color: #FFFFFF;
+                  text-align: center;
+                  font-size: 18px;
+                  padding: 10px;
+                  width: 150px;
+                  transition: all 0.5s;
+                  cursor: pointer;
+                  margin: 5px;"><span> Cancel </span></a>
+                  <a href="/bookcar/{{carchosen.id}}" class="anibutton" style="vertical-align:middle; color: #FFFFFF;"><span>Book Now </span></a>
+                  </div>
+                  <div class="w3-col l8 12">
+                    <!-- Image of location/map -->
+                    <img src={{url_for('static', filename='uploads/' + carchosen.img_name)}} class="w3-image w3-greyscale" style="width:100%;">
+                  </div>
+                </div>
+
+                <div class="w3-row-padding w3-large w3-center" style="margin:32px 0">
+                  <div class="w3-third"><i class="fa fa-map-marker w3-text-green"></i> Universiti Malaysia Sabah</div>
+                  <div class="w3-third"><i class="fa fa-phone w3-text-green"></i> Phone: 0{{client.phone_number}}</div>
+                  <div class="w3-third"><i class="fa fa-envelope w3-text-green"></i> Email: {{client.email}}</div>
+                </div>
+               
+          </div>
+        
+    </div>
+
+</header>
+
+<h3>Feedback</h3>
+
+
+  <form method = "POST">
+   
+
+    <label for="comment">Comment</label>
+    <textarea id="comment" name="comment" placeholder="Write something.." style="height:100px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <br><br>
+
+  <h4>All Comments: </h4>
+  <br>
+  {% for allcomment in feedbackcomment  %}
+  <p> {{allcomment.name}}: {{allcomment.comment}} <p>
+  {% endfor %}  
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>reference by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<title>UMS CAR RENTAL SYSTEM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+<link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+<style>
+
+.anibutton {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6B6E6C;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.anibutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.anibutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.anibutton:hover span {
+  padding-right: 25px;
+}
+
+.anibutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top" style= "background-color:#06845A">
+  <div class="w3-row w3-padding " style = "color: white">
+    <div class="w3-col s3">
+      <a href="/" class="w3-button w3-block ">HOME</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="" class="w3-button w3-block ">PROFILE</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="/managecar" class="w3-button w3-block ">MANAGE CAR</a>
+    </div>
+   
+    <div class="w3-col s3">
+      <a href="/logout" class="w3-button w3-block ">LOGOUT</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- Header with image -->
+<header style ="height: 100%;" class="bgimg w3-display-container w3-grayscale-min" id="home">
+  
+  <div class="w3-display-left w3-padding w3-col l6 m8" style="margin-left: 24%;">
+    <div class="w3-container w3-green">
+      <h2><i class="fa fa-bed w3-margin-right"></i>Booking Confirmation</h2>
+    </div>
+    <div class="w3-container w3-white w3-padding-16">
+        <p>Total : RM {{bookings.payment_value}}</p> <br>
+        <p>{{bookings.start_date}} on {{bookings.start_time}} to {{bookings.return_date}} on {{bookings.return_time}}</p> <br>
+        <p>Pickup location: {{bookings.pickup_location}}</p> 
+        <p>Return location: {{bookings.return_location}}</p> 
+        <div class="w3-row-padding" style="margin:8px -16px;">
+            <a style="vertical-align:middle; display: inline-block;
+            border-radius: 4px;
+            background-color: red;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 18px;
+            padding: 10px;
+            width: 150px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;"><span> Cancel </span></a>
+            <a href="/yourbooking" class="anibutton" style="vertical-align:middle; color: #FFFFFF;"><span>Confirm </span></a>   
+            
+    </div>
+          
+          
+        
+          
+   
+        
+       </div>
+
+    </div>
+  </div>
+    
+</header>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+    <p>reference by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+
+</body>
+</html>
